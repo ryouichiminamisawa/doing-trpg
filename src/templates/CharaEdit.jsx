@@ -1,6 +1,5 @@
 import React from "react";
-//TextInput.jsxをつくったら消してください。
-import TextInput from "@material-ui/core";
+import { TextInput } from "../components/UIKIT/index";
 
 const CharaEdit = () => {
 	return (
@@ -9,7 +8,6 @@ const CharaEdit = () => {
 			<div>
 				{/* divをImageAreaにする */}
 				<div>
-					{/* TextInput.jsxを作ります */}
 					<TextInput label={"名前"}></TextInput>
 					<TextInput label={"職業"}></TextInput>
 					<TextInput label={"スキル"}></TextInput>
