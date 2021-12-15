@@ -11,27 +11,27 @@ const useStyles = makeStyles(() => ({
 	},
 }));
 
-const TRPGSelect = () => {
+const GenderSelect = () => {
 	const classes = useStyles();
-	const [TRPG, setTRPG] = useState("");
+	const [gender, setGender] = useState("");
 
-	const TRPGs = [
-		{ id: "callofchuluhu", name: "クトゥルフ" },
-		{ id: "konosuba", name: "このすば！" },
-		{ id: "arianrhod", name: "アリアンロッド2E" },
+	const genders = [
+		{ id: "male", name: "男" },
+		{ id: "female", name: "女" },
+		{ id: "others", name: "その他" },
 	];
 
 	return (
 		<div className="player-select">
 			<FormControl className={classes.formControl}>
-				<InputLabel>TRPG</InputLabel>
+				<InputLabel>性別</InputLabel>
 
 				<Select
 					required={true}
-					value={TRPG}
-					onChanege={(event) => setTRPG(event.target.value)}
+					value={gender}
+					onChanege={(event) => setGender(event.target.value)}
 				>
-					{TRPGs.map((option) => (
+					{genders.map((option) => (
 						<MenuItem key={option.id} value={option.id}>
 							{option.name}
 						</MenuItem>
@@ -42,4 +42,4 @@ const TRPGSelect = () => {
 	);
 };
 
-export default TRPGSelect;
+export default GenderSelect;
