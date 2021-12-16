@@ -7,8 +7,8 @@ const Link = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route exact path="/" element={<Home />} />
-				<Route exact path="/edit" element={<CharaEdit />} />
+				<Route path="/" element={<Home />} />
+				<Route path="/edit" element={<CharaEdit />} />
 			</Routes>
 		</BrowserRouter>
 	);

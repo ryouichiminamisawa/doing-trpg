@@ -1,18 +1,12 @@
 import React, { useState, useCallback } from "react";
-import { TextInput, PlayerSelect, TRPGSelect } from "../components/UIKIT/index";
+import {
+	TextInput,
+	PlayerSelect,
+	TRPGSelect,
+	GenderSelect,
+} from "../components/UIKIT/index";
 
 const CharaEdit = () => {
-	const [playerName, setPlayerName] = useState({});
-
-	const playerNames = [
-		{ id: "erickwolf", name: "Erick Wolf" },
-		{ id: "kuro", name: "クロ" },
-		{ id: "sabakan", name: "鯖缶" },
-		{ id: "shigurekintoki", name: "時雨金時" },
-		{ id: "nyantaro", name: "にゃんたろー" },
-		{ id: "Leopold", name: "レオポルド" },
-	];
-
 	// const TRPGs = [
 	// 	{ id: "callofchuluhu", name: "クトゥルフ" },
 	// 	{ id: "konosuba", name: "このすば！" },
@@ -59,7 +53,6 @@ const CharaEdit = () => {
 	// 	},
 	// 	[setUrl]
 	// );
-	console.log({ playerNames });
 	return (
 		<div>
 			<h2>キャラクターシートの登録・編集</h2>
@@ -68,6 +61,7 @@ const CharaEdit = () => {
 				<div>
 					<PlayerSelect />
 					<TRPGSelect label={"TRPG"} />
+					<GenderSelect />
 					<TextInput label={"名前"}></TextInput>
 					<TextInput label={"職業"}></TextInput>
 					<TextInput label={"スキル"}></TextInput>
